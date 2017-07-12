@@ -1,0 +1,19 @@
+<h1>routes：  Welcome#index页面</h1>
+<%#控制器welcome的index动作%>
+<h2>hello ruby!</h2>
+<%#form_for 辅助方法时，需要为表单传递一个标识对象作为参数，这里是 :article 符号。
+表示 form_for 辅助方法表单用于处理哪个对象。
+在 form_for 辅助方法的块中，f 表示 FormBuilder 对象，%>
+<%= form_for: article do |f|%>
+  <p>
+    <%= f.label: title <%><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label: text %>
+    <%= f.text_area: text %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
